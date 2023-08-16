@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editable Webpage</title>
+</head>
+<style>
+  table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternating row color */
+  }
+
+  tr:nth-child(odd) {
+    background-color: white; /* Alternating row color */
+  }
+  
+  td.merged {
+    /* Merge the cells */
+    width: 100%;
+  }
+  
+  .vertical-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: center;
+  }
+</style>
+
+<body>
+  <h1 contenteditable="true" oninput="updateSourceCode()"> Judgement Drafting Record</h1>
+  <div contenteditable="true" oninput="updateSourceCode()">
+    <table>
+
+      <tbody>
+            <tr>
+              
+          <th>इजलास</th>
+          <th>क्र.सङ्ख्या-मुद्दा</th>
+          <th>मुद्दा नं </th>
+          <th>पक्ष || विपक्ष</th>
+          <th>का. व्य. नाम (पक्ष)</th>
+          <th>का. व्य. नाम (विपक्ष)</th>
+          <th>मुद्दाको स्थिती</th>
+          <th>अनुसन्धात्मक लेख</th>
+          <th>कार्य स्थिति</th>
+          <th>कैफियत</th>
+        </tr>
+        <tr>
+          <td rowspan="5">स.का.मु.प्र.न्या. श्री विश्वम्भरप्रसाद श्रेष्ठ<br><br>
+            मा. न्या. श्री ईश्वरप्रसाद खतिवडा<br><br>
+            मा. न्या. डा. श्री आनन्दमोहन भट्टराई<br><br>
+            मा. न्या. श्री अनिल कुमार सिन्हा<br><br>
+            मा. न्या. श्री प्रकाशमान सिंह राउत <br></td>
+        </tr>
+        <tr>
+          <td>क. उत्प्रेषणसमेत</td>
+          <td>079-WC-0092</a></td>
+          <td>देवनारायण महतो समेत <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; वि.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> गौशला नगरपालिकाको कार्यालय महोत्तरी समेत ५</td>
+          <td>अ. श्री रामकुमार कामत</td>
+          <td>xxx</td>
+          <td>रिट खारेज -का.दे.आ. जारी नहुने</td>
+          <td>---</td>
+          <td>टिपोटकै क्रममा छ</td>
+          <td>दर्ताः २०८०।०३।०६</td>
+        </tr>
+        <tr>
+          <td>ग. उत्प्रेषणसमेत</td>
+          <td>079-WC-0094</td>
+          <td>अधिवक्ता कृष्ण प्रसाद दाहाल <br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; वि.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>  प्रधानमन्त्री तथा मन्त्रीपरिषदको कार्यालय सिंहदरबार काठमाडौ समेत ६</td>
+          <td>व.अ. श्री केदार कार्की,  व.अ. हरिप्रसाद आचार्य, अ. श्री कृष्ण प्रसाद दाहाल, अ. वमबहादुर कटुवाल</td>
+          <td>xxx</td>
+          <td>रिट खारेज -का.दे.आ. जारी नहुने</td>
+          <td>---</td>
+          <td>सुसुप्त अवस्था छ</td>
+          <td>दर्ताः २०८०।०३।१३</td>
+        </tr>
+        <tr>
+          <td>घ. उत्प्रेषणसमेत</td>
+          <td>079-WC-0095</td>
+          <td>नेपाल ट्रक यातायात व्यवसायी महासंघ <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; वि.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> प्रधानमन्त्री तथा मन्त्रीपरिषदको कार्यालय सिंहदरबार काठमाडौ समेत ६</td>
+          <td>व.अ. विजयप्रसाद मिश्र</td>
+          <td>xxx</td>
+          <td>फैसला-लगत कट्टा हुने </td>
+          <td>---</td>
+          <td>सुसुप्त अवस्था छ</td>
+          <td>दर्ताः २०८०।०३।२५</td>
+        </tr>
+        <tr>
+          <td>च. उत्प्रेषणसमेत</td>
+          <td>080-WC-0003</td>
+          <td>अधिवक्ता रादीका चम्लागाई  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; वि.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> कानून न्याय तथा संसदीय मामिला सिंहदरबार काठमाडौसमेत</td>
+          <td>अ. भद्र प्रसाद नेपाल, अ. विकाश भट्टराई, अ. त्रिलोक बहादुर चन्द, अ. डा. श्री शिवकुमार यादव, अ. ज्ञानेन्द्र आरण, श्री विशाल कुमार उपाध्याय</td>
+          <td>xxx</td>
+          <td>रिट खारेज-का.दे.आ. जारी नहुने</td>
+          <td>---</td>
+          <td>सुसुप्त अवस्था छ</td>
+          <td>दर्ताः २०८०।०३।२५</td>
+        </tr>
+        <tr>
+          <td><br>इ.अः <br>श्री अन्जनराज सापकोटा, <br><b>श्री शिवप्रसाद आचार्य </b> </td>
+          <td colspan="9">इति संवत २०८० साल साउन २४ गते रोज ४ शुभम्.....</td>
+        </tr>
+ 
+    </tbody></table>
+  </div>
+
+  <!-- This is where the source code will be displayed -->
+  <pre id="sourceCodeDisplay"></pre>
+
+  <script>
+    function updateSourceCode() {
+      const htmlCode = document.documentElement.outerHTML; // Get the entire HTML code
+      const sourceCodeDisplay = document.getElementById('sourceCodeDisplay');
+
+      // Display the updated HTML code in the sourceCodeDisplay element
+      sourceCodeDisplay.textContent = htmlCode;
+    }
+  </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
